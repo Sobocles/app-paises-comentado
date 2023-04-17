@@ -1,0 +1,27 @@
+<h2>Por Capital</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    
+      <!-- SearchBox -->
+      <!--
+        en el código <shared-search-box placeholder="Este es un nuevo placeholder"></shared-search-box> 
+        se está pasando el valor "Este es un nuevo placeholder" al componente shared-search-box a través del
+         atributo placeholder.
+      -->
+    <shared-search-box (onValue)="searchByCapital($event)" 
+                        placeholder="Este es un nuevo placeholder"></shared-search-box>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr>
+    <ul>
+      <li *ngFor="let country of countries">
+        {{ country.capital }}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<!--En el código [placeholder]="placeholder", se establece el valor del atributo placeholder del elemento 
+    input en el valor de la propiedad placeholder del componente. Si la propiedad placeholder no se ha 
+    establecido en el componente, el valor por defecto que se estableció en la declaración de la propiedad
+     public placeholder: string = ''; se utilizará en su lugar.-->
+<input
+  type="text"
+  [placeholder]="placeholder"
+  class="form-control"
+  (keyup.enter)="emitValue( txtInput.value )"
+  #txtInput
+  >
